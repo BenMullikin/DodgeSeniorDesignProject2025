@@ -1,0 +1,19 @@
+<type>[<optional scope>]: <description>
+
+# Type must be one of:
+#   feat     -> A new feature
+#   fix      -> A bug fix
+#   docs     -> Documentation changes only
+#   style    -> Formatting, whitespace, or style-only changes (no code changes!!)
+#   refactor -> Code/hardware refactor that doesn't fix a bug or add a feature
+#   test     -> Adding or updating tests
+#   chore    -> Tooling, CI, or build process changes 
+
+# Optional Body:
+# - Explain "why" the change was made.
+# - Include context or implementation notes.
+# - Use bullet points for clarity.
+
+# Optional Footer:
+# BREAKING CHANGE: description
+# Related issues: #123
