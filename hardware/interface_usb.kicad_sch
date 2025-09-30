@@ -1,0 +1,3926 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "9d45dbc5-fc5d-4490-8a51-433afa29c55e")
+	(paper "USLetter")
+	(title_block
+		(title "${BOARD_NAME}")
+		(date "2025-04-07")
+		(rev "${REVISION}")
+		(company "${DESIGNER}")
+	)
+	(lib_symbols
+		(symbol "Interface_USB:STUSB4500QTR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -12.7 21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "STUSB4500QTR"
+				(at 8.89 -21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.st.com/resource/en/datasheet/stusb4500.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Stand-alone USB PD controller (with sink Auto-run mode), QFN-24"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "USB PD Type C Sink"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "QFN*4x4mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "STUSB4500QTR_0_1"
+				(rectangle
+					(start -12.7 20.32)
+					(end 12.7 -20.32)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "STUSB4500QTR_1_1"
+				(pin input line
+					(at -15.24 17.78 0)
+					(length 2.54)
+					(name "RESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 12.7 0)
+					(length 2.54)
+					(name "CC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 10.16 0)
+					(length 2.54)
+					(name "CC1DB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "CC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 2.54 0)
+					(length 2.54)
+					(name "CC2DB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -2.54 0)
+					(length 2.54)
+					(name "VBUS_VS_DISCH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -7.62 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -15.24 -10.16 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at -15.24 -12.7 0)
+					(length 2.54)
+					(name "ALERT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -15.24 0)
+					(length 2.54)
+					(name "ADDR0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -17.78 0)
+					(length 2.54)
+					(name "ADDR1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 15.24 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 22.86 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 22.86 270)
+					(length 2.54)
+					(name "VSYS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -22.86 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -22.86 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 5.08 22.86 270)
+					(length 2.54)
+					(name "VREG_1V2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 22.86 270)
+					(length 2.54)
+					(name "VREG_2V7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "VBUS_EN_SNK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 2.54 180)
+					(length 2.54)
+					(name "POWER_OK2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "POWER_OK3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "DISCH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 -10.16 180)
+					(length 2.54)
+					(name "A_B_SIDE"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 -12.7 180)
+					(length 2.54)
+					(name "ATTACH"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 15.24 -15.24 180)
+					(length 2.54)
+					(name "GPIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Interface_USB:USB3300-EZK"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "USB3300-EZK"
+				(at 0 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm"
+				(at 33.02 -31.75 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/00001783C.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Hi-Speed USB Host, Device or OTG PHY with ULPI Interface"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "USB OTG Hi-Speed PHY ULPI Interface"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*QFN*32*1EP*5x5mm*P0.5mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "USB3300-EZK_0_1"
+				(rectangle
+					(start 16.51 -24.13)
+					(end -16.51 24.13)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "USB3300-EZK_1_1"
+				(pin power_in line
+					(at -20.32 17.78 0)
+					(length 3.81)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -20.32 15.24 0)
+					(length 3.81)
+					(name "DM"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -20.32 12.7 0)
+					(length 3.81)
+					(name "DP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -20.32 10.16 0)
+					(length 3.81)
+					(name "ID"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -20.32 5.08 0)
+					(length 3.81)
+					(name "XO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -20.32 0 0)
+					(length 3.81)
+					(name "XI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -20.32 -5.08 0)
+					(length 3.81)
+					(name "CPEN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -20.32 -7.62 0)
+					(length 3.81)
+					(name "EXTVBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -20.32 -12.7 0)
+					(length 3.81)
+					(name "REG_EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -20.32 -17.78 0)
+					(length 3.81)
+					(name "RBIAS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 27.94 270)
+					(length 3.81)
+					(name "VDD3.3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 27.94 270)
+					(length 3.81)
+					(name "VDD3.3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -27.94 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 27.94 270)
+					(length 3.81)
+					(name "VDD3.3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -27.94 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 27.94 270)
+					(length 3.81)
+					(name "VDD3.3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 -27.94 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 20.32 20.32 180)
+					(length 3.81)
+					(name "VDD1.8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 20.32 17.78 180)
+					(length 3.81)
+					(name "VDD1.8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "26"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 20.32 15.24 180)
+					(length 3.81)
+					(name "VDDA1.8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 10.16 180)
+					(length 3.81)
+					(name "DATA7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 7.62 180)
+					(length 3.81)
+					(name "DATA6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 5.08 180)
+					(length 3.81)
+					(name "DATA5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 2.54 180)
+					(length 3.81)
+					(name "DATA4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 0 180)
+					(length 3.81)
+					(name "DATA3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -2.54 180)
+					(length 3.81)
+					(name "DATA2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -5.08 180)
+					(length 3.81)
+					(name "DATA1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -7.62 180)
+					(length 3.81)
+					(name "DATA0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 -10.16 180)
+					(length 3.81)
+					(name "NXT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 -12.7 180)
+					(length 3.81)
+					(name "DIR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 20.32 -15.24 180)
+					(length 3.81)
+					(name "STP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 -17.78 180)
+					(length 3.81)
+					(name "CLKOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 20.32 -20.32 180)
+					(length 3.81)
+					(name "RESET"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "local-cap:Kemet-0805-Cap"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 3.048 2.54 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "val"
+				(at 3.048 -2.54 0)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "CAPC220145_88N_KEM"
+				(at -25.908 14.478 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+				(at -25.908 7.112 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "KEMET 0805 X7R Capacitor"
+				(at -25.908 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Manufacture" "KEMET"
+				(at -25.908 10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Manufacturer Part Number" "C0805C104K4RACTU"
+				(at -19.05 10.922 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Supplier" "Digikey"
+				(at -25.908 9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Supplier Part Number" "C0805C104K4RACTU"
+				(at -19.05 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "C0805C104K4RACTU"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "CAPC220145_88N_KEM CAPC220145_88N_KEM-M CAPC220145_88N_KEM-L"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Kemet-0805-Cap_1_1"
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.381)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.81 -1.27) (xy 3.81 1.27)
+					)
+					(stroke
+						(width 0.381)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at 0 0 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(symbol "Kemet-0805-Cap_1_2"
+				(polyline
+					(pts
+						(xy -1.905 -3.4798) (xy 1.905 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -4.1148) (xy 1.905 -4.1148)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 0 -3.4798)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.1148) (xy 0 -5.08)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 0 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 158.75 147.32)
+		(end 265.43 182.88)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 291bdc1f-daed-4bc1-b38f-d1753b9cde82)
+	)
+	(rectangle
+		(start 13.97 147.32)
+		(end 52.07 201.93)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5337f5a6-68f5-41b1-9fad-58a97e00f475)
+	)
+	(text "Decoupling Capacitors"
+		(exclude_from_sim yes)
+		(at 217.678 146.05 0)
+		(effects
+			(font
+				(face "Adwaita Mono")
+				(size 3.81 3.81)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "59d49f05-e5d4-4062-9bea-cbbc8a7f16c8")
+	)
+	(text "Design Notes"
+		(exclude_from_sim yes)
+		(at 109.22 146.304 0)
+		(effects
+			(font
+				(face "Adwaita Mono")
+				(size 3.81 3.81)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "870ec330-0d03-446b-8ae5-1227a177709f")
+	)
+	(text "INTERFACE - USB"
+		(exclude_from_sim yes)
+		(at 16.256 24.13 0)
+		(effects
+			(font
+				(face "Verdana")
+				(size 7.62 7.62)
+				(thickness 0.254)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "906e6b2d-1869-4e6f-b3f0-a20d4f0b8d92")
+	)
+	(text "Pinouts"
+		(exclude_from_sim yes)
+		(at 31.496 146.304 0)
+		(effects
+			(font
+				(face "Adwaita Mono")
+				(size 3.81 3.81)
+				(thickness 1.016)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "93f6d29e-e14e-4b28-a9d2-31845e06bcc8")
+	)
+	(text_box "\n- Recommended caps: X7R dielectric, 16V Rated, 0805 Pakcage"
+		(exclude_from_sim yes)
+		(at 53.34 147.32 0)
+		(size 104.14 54.61)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.1588)
+			)
+			(justify left top)
+		)
+		(uuid "eb7cb628-dc62-432a-baeb-d8958aa2337e")
+	)
+	(junction
+		(at 241.3 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "002c34a8-eca1-47dc-9252-e4da9ea699ec")
+	)
+	(junction
+		(at 218.44 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1a03cb17-a636-4490-86c2-57d7fe9151a3")
+	)
+	(junction
+		(at 187.96 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fca8f35-cded-424f-8766-00f1e88c9ffd")
+	)
+	(junction
+		(at 241.3 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ca1c15d-c593-488a-a4aa-e0eb49195116")
+	)
+	(junction
+		(at 210.82 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e90a224-e003-458d-96ea-46117fc6bd45")
+	)
+	(junction
+		(at 187.96 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6cf4947d-4e22-46f4-9944-607d05dfc1dc")
+	)
+	(junction
+		(at 195.58 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7a15cf0c-3a19-4791-9e06-25762ad07732")
+	)
+	(junction
+		(at 203.2 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80bb85a3-a8e3-4216-95b2-dc1efa36d2eb")
+	)
+	(junction
+		(at 233.68 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94972211-4b20-4e59-b7b5-1403c35466cb")
+	)
+	(junction
+		(at 226.06 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a3820cdf-deab-4838-9e49-88627cbdd22d")
+	)
+	(junction
+		(at 226.06 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8687027-a504-4aeb-942c-995be4438308")
+	)
+	(junction
+		(at 195.58 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abe9ce62-14a7-4e24-945e-8a08e35e344d")
+	)
+	(junction
+		(at 203.2 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc55e7f7-1c41-4d73-83d1-eb6ca7310c15")
+	)
+	(junction
+		(at 218.44 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c64390c9-af6a-4e4a-9e05-8631b21f24b2")
+	)
+	(junction
+		(at 233.68 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6fcd110-fb1d-4d28-b16c-8909ee9f284d")
+	)
+	(junction
+		(at 210.82 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e0e2e7dd-dfea-4795-8270-99d790623cfd")
+	)
+	(bus_entry
+		(at 27.94 166.37)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94872a98-b4eb-420b-b7da-2e9509e280e3")
+	)
+	(bus_entry
+		(at 27.94 163.83)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4f2b680-5cde-4689-a224-9ccdbb9c9a0a")
+	)
+	(bus_entry
+		(at 27.94 158.75)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7324e1a-ba0e-4294-9581-396fbaa69677")
+	)
+	(bus_entry
+		(at 27.94 161.29)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e938cade-7fe1-4405-be4c-9ca055a9f42a")
+	)
+	(wire
+		(pts
+			(xy 233.68 161.29) (xy 241.3 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01f65bc8-be32-4e7e-b334-74d27d08fd4b")
+	)
+	(wire
+		(pts
+			(xy 22.86 158.75) (xy 27.94 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04fb6aad-9606-41d8-93ca-f2ff49c5a4de")
+	)
+	(wire
+		(pts
+			(xy 181.61 170.18) (xy 187.96 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b84c349-25b4-442a-bae1-1f3066659c63")
+	)
+	(wire
+		(pts
+			(xy 195.58 161.29) (xy 203.2 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17356252-901f-42b9-a0a2-a30e58a1dbe0")
+	)
+	(bus
+		(pts
+			(xy 30.48 166.37) (xy 30.48 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bb40491-6a47-42be-92ec-9a4182b615c8")
+	)
+	(wire
+		(pts
+			(xy 241.3 162.56) (xy 241.3 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c19162c-702a-4eef-ac75-8580b83abf1c")
+	)
+	(wire
+		(pts
+			(xy 241.3 161.29) (xy 248.92 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b17ffa0-4a6c-499e-8884-310c023c21bf")
+	)
+	(wire
+		(pts
+			(xy 226.06 168.91) (xy 226.06 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30e6c71a-7b65-44be-9a84-ac4b23843d54")
+	)
+	(wire
+		(pts
+			(xy 233.68 162.56) (xy 233.68 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e384fd9-3330-4f51-895e-7ad66edff5b0")
+	)
+	(wire
+		(pts
+			(xy 210.82 161.29) (xy 218.44 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f9df66a-7227-4562-85c5-422bb52e044e")
+	)
+	(wire
+		(pts
+			(xy 226.06 170.18) (xy 233.68 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46f7050b-b7fc-4e54-8960-85f7e5313e6f")
+	)
+	(wire
+		(pts
+			(xy 203.2 170.18) (xy 210.82 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51e82d61-c1d4-44e7-b0bb-cd4a3f1a1186")
+	)
+	(wire
+		(pts
+			(xy 218.44 168.91) (xy 218.44 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "532295d6-c259-401a-ade2-e1ad5199145e")
+	)
+	(wire
+		(pts
+			(xy 22.86 163.83) (xy 27.94 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57295922-3d39-4dc6-8176-62fd7bc8b367")
+	)
+	(wire
+		(pts
+			(xy 203.2 162.56) (xy 203.2 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b23eefa-1b58-48d9-893e-307b1536e995")
+	)
+	(bus
+		(pts
+			(xy 30.48 166.37) (xy 30.48 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63d05c77-c618-416a-97e8-a75d76415a37")
+	)
+	(wire
+		(pts
+			(xy 187.96 162.56) (xy 187.96 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c7505fa-115d-4551-9e5a-e12093af013e")
+	)
+	(wire
+		(pts
+			(xy 226.06 161.29) (xy 233.68 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dbe98b1-9d5f-4f2a-8a98-ae45ab5f2ea3")
+	)
+	(wire
+		(pts
+			(xy 248.92 168.91) (xy 248.92 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6dfc9d80-9226-4f6a-ad42-1874251d6bfa")
+	)
+	(wire
+		(pts
+			(xy 218.44 161.29) (xy 226.06 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72b036e9-e0f3-47ae-b2b8-c65c8cbadcde")
+	)
+	(wire
+		(pts
+			(xy 195.58 161.29) (xy 195.58 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74058547-0291-4588-ae87-1a70e46fe48e")
+	)
+	(wire
+		(pts
+			(xy 187.96 161.29) (xy 195.58 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c8576e0-12e5-4946-8b63-e76744b554c4")
+	)
+	(wire
+		(pts
+			(xy 181.61 170.18) (xy 181.61 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81bba3de-7a2e-49f2-802d-7357281f30f0")
+	)
+	(bus
+		(pts
+			(xy 34.29 152.4) (xy 41.91 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83af8359-57f1-40df-b927-f87ee621555f")
+	)
+	(wire
+		(pts
+			(xy 218.44 162.56) (xy 218.44 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86c1744b-b45b-4007-bd39-233b0b9876b4")
+	)
+	(wire
+		(pts
+			(xy 233.68 170.18) (xy 241.3 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87a425e9-447b-47b1-a50d-a599ee7ad70a")
+	)
+	(wire
+		(pts
+			(xy 203.2 168.91) (xy 203.2 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cd55587-3352-45de-8982-5b7d4fe364ef")
+	)
+	(wire
+		(pts
+			(xy 233.68 168.91) (xy 233.68 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "906cdf02-3565-4faa-a9a0-b917a14640bf")
+	)
+	(bus
+		(pts
+			(xy 30.48 161.29) (xy 30.48 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90a6257d-1b57-4fbb-a993-c65135106859")
+	)
+	(wire
+		(pts
+			(xy 248.92 162.56) (xy 248.92 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94335fed-1506-4e84-ab84-42a4752f3ced")
+	)
+	(wire
+		(pts
+			(xy 195.58 170.18) (xy 195.58 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a2223a4-e45e-434e-aca4-a1f691a0f3b6")
+	)
+	(wire
+		(pts
+			(xy 181.61 160.02) (xy 181.61 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cd5e65c-f445-4d1f-bcbf-a2306cfdfb1f")
+	)
+	(wire
+		(pts
+			(xy 210.82 168.91) (xy 210.82 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a20d9399-9dcb-4dcf-ac24-13745d553c41")
+	)
+	(wire
+		(pts
+			(xy 218.44 170.18) (xy 226.06 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a598a367-5ce6-46af-b878-64ba04320877")
+	)
+	(wire
+		(pts
+			(xy 210.82 170.18) (xy 218.44 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6928a39-1ecb-4aa2-8666-c1c16e038691")
+	)
+	(wire
+		(pts
+			(xy 187.96 170.18) (xy 195.58 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5f50d59-5ed6-4c0f-9475-bfea801390b0")
+	)
+	(bus
+		(pts
+			(xy 30.48 163.83) (xy 30.48 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b905e12d-9f93-48e8-b5f4-8d9df84371c5")
+	)
+	(wire
+		(pts
+			(xy 241.3 170.18) (xy 248.92 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9440c1a-6e14-4bd6-bf4b-368d8037191e")
+	)
+	(wire
+		(pts
+			(xy 226.06 162.56) (xy 226.06 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "babeb4ac-d26e-446e-bcef-84661038ac0f")
+	)
+	(wire
+		(pts
+			(xy 203.2 161.29) (xy 210.82 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1cda60-ffe9-4f04-8024-2e82c4406567")
+	)
+	(wire
+		(pts
+			(xy 187.96 168.91) (xy 187.96 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb8dbf6a-3603-455d-9b63-bb65742cc732")
+	)
+	(polyline
+		(pts
+			(xy 85.09 147.32) (xy 88.9 147.32)
+		)
+		(stroke
+			(width 0.508)
+			(type solid)
+			(color 255 255 255 1)
+		)
+		(uuid "cf956757-7ca4-4f46-8e61-92db1d2636cf")
+	)
+	(wire
+		(pts
+			(xy 22.86 161.29) (xy 27.94 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0b17b8f-12c9-40de-b9c1-a92cfc901916")
+	)
+	(wire
+		(pts
+			(xy 27.94 175.26) (xy 24.13 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d15cc2e2-cf2d-4ee0-865d-48418510427f")
+	)
+	(wire
+		(pts
+			(xy 22.86 166.37) (xy 27.94 166.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d59db410-05bd-45fb-9bbc-ce80fad8df09")
+	)
+	(wire
+		(pts
+			(xy 195.58 170.18) (xy 203.2 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d991713d-e6da-44b9-a466-12709f57f9ef")
+	)
+	(wire
+		(pts
+			(xy 181.61 161.29) (xy 187.96 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da175e37-5291-431c-8ef9-6a8047feac38")
+	)
+	(wire
+		(pts
+			(xy 241.3 168.91) (xy 241.3 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f012f2f6-a362-4003-94d1-254896042f83")
+	)
+	(wire
+		(pts
+			(xy 210.82 162.56) (xy 210.82 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa86a812-cc0d-41d5-997d-117b5d0201f8")
+	)
+	(bus
+		(pts
+			(xy 30.48 156.21) (xy 34.29 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe04b160-fb9c-4846-a6ac-aa591754aeec")
+	)
+	(label "LO"
+		(at 27.94 175.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2214fd36-3a5e-473d-8b04-39e5ad5affbf")
+	)
+	(hierarchical_label "RF_IN"
+		(shape input)
+		(at 41.91 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "aee8226a-c2de-4541-ae77-172fb6937cb1")
+	)
+	(hierarchical_label "LO"
+		(shape input)
+		(at 24.13 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "de06d200-e535-4beb-8691-cce414ae245f")
+	)
+	(symbol
+		(lib_id "Interface_USB:USB3300-EZK")
+		(at 73.66 72.39 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "02676198-a2e8-48a2-a5f7-133ddc3f23ad")
+		(property "Reference" "U17"
+			(at 78.3433 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "USB3300-EZK"
+			(at 78.3433 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm"
+			(at 106.68 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/00001783C.pdf"
+			(at 73.66 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Hi-Speed USB Host, Device or OTG PHY with ULPI Interface"
+			(at 73.66 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "31"
+			(uuid "af658749-751d-4410-8130-28eb0c56cff0")
+		)
+		(pin "30"
+			(uuid "8f57d055-a1ec-4280-92f4-16b4121b46a7")
+		)
+		(pin "25"
+			(uuid "89f30596-a69d-43fa-b597-b4d7cfbeaca0")
+		)
+		(pin "33"
+			(uuid "fea238e2-65ca-468d-8431-af1874de3c3d")
+		)
+		(pin "9"
+			(uuid "37ed4241-e8c4-4936-a891-1c1f6092ed12")
+		)
+		(pin "15"
+			(uuid "5df3222f-ea28-42ee-b751-d2ebc7981e1e")
+		)
+		(pin "6"
+			(uuid "43ed3927-56b4-4fb2-ac99-12a84f51e0cc")
+		)
+		(pin "23"
+			(uuid "3b77df88-6a0d-40e0-b725-997dcb5c6e2b")
+		)
+		(pin "19"
+			(uuid "cf33e2e8-5da4-4a23-af32-5fff24953354")
+		)
+		(pin "32"
+			(uuid "8314efa8-df15-483e-be11-4a1c39e39df2")
+		)
+		(pin "7"
+			(uuid "c51d9916-b2c2-485a-b691-5af993eb74f7")
+		)
+		(pin "8"
+			(uuid "b19f9ebf-2bdf-4d5b-a9ab-5b788d407f13")
+		)
+		(pin "22"
+			(uuid "499a4219-ec2b-43da-b8ed-967e5380b9e9")
+		)
+		(pin "27"
+			(uuid "000a62a0-992d-4eb8-9d50-c7b832b2ed34")
+		)
+		(pin "5"
+			(uuid "001ec688-0343-43cc-a695-d854243d3d9e")
+		)
+		(pin "20"
+			(uuid "5266dda8-1f5d-4485-9f8a-d0529a500711")
+		)
+		(pin "28"
+			(uuid "cdc15f11-7ca6-45ee-946a-9bd3eb45bdc1")
+		)
+		(pin "29"
+			(uuid "f385f38b-ab23-4a7b-8ab3-346c97df961c")
+		)
+		(pin "10"
+			(uuid "45ba45f3-893e-46d2-ae0e-e7476cbec334")
+		)
+		(pin "16"
+			(uuid "d7a58306-f34b-4b95-a689-98ab381d70c2")
+		)
+		(pin "14"
+			(uuid "67d1bd70-10c0-4779-a343-ff472c3138b1")
+		)
+		(pin "17"
+			(uuid "5adba0f7-a540-4ba5-8896-daace283d3fa")
+		)
+		(pin "12"
+			(uuid "087662f6-0e5e-484a-ade8-6e82f675a825")
+		)
+		(pin "18"
+			(uuid "c212dc2e-33ff-462d-a059-94f9428308df")
+		)
+		(pin "4"
+			(uuid "4a0fa9ec-ac8b-45d2-9f05-e44643214334")
+		)
+		(pin "21"
+			(uuid "8197e667-d9f1-48a4-82fd-6e3e5286d48f")
+		)
+		(pin "1"
+			(uuid "14588a2c-f94d-44e4-bd67-183b13151b69")
+		)
+		(pin "26"
+			(uuid "6e0960f1-b4e0-4581-910c-0d8af47026d4")
+		)
+		(pin "3"
+			(uuid "0e7681ae-ec06-479b-96a9-7fcabe005129")
+		)
+		(pin "2"
+			(uuid "62c4ad90-8c4a-4d2e-ba44-cad93a9b8c12")
+		)
+		(pin "11"
+			(uuid "f74c3e53-cf28-4154-b519-f1cff935beaf")
+		)
+		(pin "13"
+			(uuid "5c4a8b1a-a5b8-46a7-ba8c-0410a931acf1")
+		)
+		(pin "24"
+			(uuid "7ae7983f-b5f5-4ec6-b026-65c5cba93701")
+		)
+		(instances
+			(project ""
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 195.58 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a13e85c-d5e2-407e-a1da-e2e5b305baf8")
+		(property "Reference" "C103"
+			(at 195.58 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 195.58 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 181.102 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 188.468 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 182.88 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 184.658 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 184.658 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 186.436 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 186.69 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd16d931-d0cc-4b60-955f-93adda00839c")
+		)
+		(pin "2"
+			(uuid "fc4817a5-2184-4e8c-84d9-d143a3467beb")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 181.61 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "34603507-bf56-473a-a100-56f952783274")
+		(property "Reference" "#PWR094"
+			(at 181.61 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 181.61 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 181.61 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d50f4aa-b8ac-4b36-904f-5e080cde0669")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 241.3 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "44bdb419-f90e-42f5-9c01-aed06ddff2ee")
+		(property "Reference" "C109"
+			(at 241.3 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 241.3 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 226.822 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 234.188 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 228.6 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 230.378 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 230.378 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 232.156 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 232.41 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b47f7754-43df-429e-abcd-4f5e0577ef4a")
+		)
+		(pin "2"
+			(uuid "354a971d-6cd6-48b6-8188-91ad1f46e0b3")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 203.2 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "55a2d387-bb24-47c2-9e2e-282fe69f2493")
+		(property "Reference" "C104"
+			(at 203.2 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100pF"
+			(at 203.2 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 188.722 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 196.088 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 190.5 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 192.278 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 192.278 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 194.056 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 194.31 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c61fc1ee-fff2-4c8d-b21e-95d2201fe118")
+		)
+		(pin "2"
+			(uuid "79c77bc9-72c2-4701-8798-ada72c06a749")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 233.68 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7c610579-d1d2-41f3-80ab-ec6f32b28c5d")
+		(property "Reference" "C108"
+			(at 233.68 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 233.68 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 219.202 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 226.568 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 220.98 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 222.758 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 222.758 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 224.536 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 224.79 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "311a4e0c-d092-47ff-9af3-f28bcc9df64b")
+		)
+		(pin "2"
+			(uuid "7cb6f26a-2c03-485a-9329-581f550343e5")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 248.92 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "883d2864-9170-4eff-8647-03415d71b968")
+		(property "Reference" "C110"
+			(at 248.92 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 248.92 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 234.442 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 241.808 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 236.22 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 237.998 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 237.998 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 239.776 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 240.03 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3392ad6e-93a7-4cc1-9006-348d720618bd")
+		)
+		(pin "2"
+			(uuid "4a0cf8c2-c967-43ee-8c8c-9b7cc6aa8d8b")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C110")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 187.96 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94f49a2c-f562-4f6a-a40c-08861c8174d8")
+		(property "Reference" "C102"
+			(at 187.96 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 187.96 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 173.482 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 180.848 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 175.26 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 177.038 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 177.038 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 178.816 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 179.07 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f33fbab6-673b-4f7d-933e-b4315af62b86")
+		)
+		(pin "2"
+			(uuid "ed4b0f0a-b69e-436e-9e9a-d24e9fb6ebfb")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 218.44 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac45934d-debd-4708-8865-ca7559438b0b")
+		(property "Reference" "C106"
+			(at 218.44 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 218.44 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 203.962 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 211.328 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 205.74 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 207.518 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 207.518 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 209.296 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 209.55 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f77d58d1-ca5d-48f9-9092-91b819189045")
+		)
+		(pin "2"
+			(uuid "fa116623-45e8-4a76-977e-e806f1d778c0")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 181.61 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b34527b7-2d71-4d36-a90d-b70605d682ce")
+		(property "Reference" "#PWR093"
+			(at 181.61 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 181.61 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 181.61 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 181.61 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77a58b91-c0fe-4a29-bc36-a2501433dd69")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 226.06 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c4c44fac-ec1b-4a38-8c8c-d1506743a154")
+		(property "Reference" "C107"
+			(at 226.06 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 226.06 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 211.582 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 218.948 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 213.36 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 215.138 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 215.138 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 216.916 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 217.17 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "633ab014-9a8e-4af7-978d-f2f99388682e")
+		)
+		(pin "2"
+			(uuid "b5d90cf3-dd2a-4d09-9b7b-92bc0f11cb7b")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Interface_USB:STUSB4500QTR")
+		(at 166.37 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e45fca54-c20f-4974-a7c4-cf6fd98ba703")
+		(property "Reference" "U16"
+			(at 168.5133 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "STUSB4500QTR"
+			(at 168.5133 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm"
+			(at 166.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stusb4500.pdf"
+			(at 166.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Stand-alone USB PD controller (with sink Auto-run mode), QFN-24"
+			(at 166.37 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "13"
+			(uuid "c5843c3f-6cdc-46ee-8caa-c60a9699eef5")
+		)
+		(pin "17"
+			(uuid "da940478-e2d7-4676-b5ca-ddd36d19d1d1")
+		)
+		(pin "15"
+			(uuid "97845c0a-a549-4566-8918-5e20af8139e8")
+		)
+		(pin "21"
+			(uuid "44a1121a-548d-4e9c-999a-5d7531a4bb88")
+		)
+		(pin "5"
+			(uuid "64e53c16-3d32-421f-b9a2-e7afc25005c4")
+		)
+		(pin "4"
+			(uuid "47f04be7-1acd-403d-ad79-933177808765")
+		)
+		(pin "1"
+			(uuid "f90a3e34-b7e2-48d9-8a59-3fb9eb2e4a47")
+		)
+		(pin "18"
+			(uuid "88baf9ea-240e-44ba-8643-504138ac585d")
+		)
+		(pin "22"
+			(uuid "69bf369d-0c18-465f-8cb2-5df4e844d348")
+		)
+		(pin "11"
+			(uuid "9d8aede7-e9ad-4e7c-8c38-da01b18193f9")
+		)
+		(pin "8"
+			(uuid "a4388d1b-fd53-41f0-b184-65f7c3017645")
+		)
+		(pin "3"
+			(uuid "2b734bdf-c49f-441a-aaa4-ff0d2cc036f7")
+		)
+		(pin "14"
+			(uuid "36e8dfdb-362d-4981-8287-cc4a7acf6cd5")
+		)
+		(pin "9"
+			(uuid "11bee4cb-f1f0-4df3-9dfb-aa0c42203689")
+		)
+		(pin "10"
+			(uuid "f516b1b2-aaf6-4dee-a3b3-1d3f6bd50188")
+		)
+		(pin "2"
+			(uuid "88d3645e-9b70-4ea1-a408-c8b09c9c540d")
+		)
+		(pin "6"
+			(uuid "aac8143c-0e47-45c0-b64e-d2b5af99999f")
+		)
+		(pin "19"
+			(uuid "e68c96c5-dabe-4a30-8622-88fbe582ebad")
+		)
+		(pin "25"
+			(uuid "4e5572c4-bfed-479d-81f9-28e536cc1173")
+		)
+		(pin "23"
+			(uuid "bdda7a22-92fc-48cf-91df-6df33fa67ea3")
+		)
+		(pin "24"
+			(uuid "a95f1553-0cf7-4949-8fba-d132343fb698")
+		)
+		(pin "12"
+			(uuid "6c35f775-9dc7-49a6-a55d-4feab4349ff8")
+		)
+		(pin "20"
+			(uuid "7daca543-944c-46d5-bc6d-16d1e9e1ddb2")
+		)
+		(pin "16"
+			(uuid "6de95b64-6939-4744-8504-6dcde18dff9c")
+		)
+		(pin "7"
+			(uuid "f013968c-ea66-4a44-8c4a-22a4e4d52547")
+		)
+		(instances
+			(project ""
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "U16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local-cap:Kemet-0805-Cap")
+		(at 210.82 168.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f077cfdb-0ce7-42a1-aaff-c0d0b72dd648")
+		(property "Reference" "C105"
+			(at 210.82 159.766 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Value" "100pF"
+			(at 210.82 171.958 90)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+			)
+		)
+		(property "Footprint" "CAPC220145_88N_KEM"
+			(at 196.342 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/docs/kemet_0805_100nf_x7r_cap.pdf"
+			(at 203.708 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "KEMET 0805 X7R Capacitor"
+			(at 198.12 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacture" "KEMET"
+			(at 199.898 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Part Number" "C0805C104K4RACTU"
+			(at 199.898 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier" "Digikey"
+			(at 201.676 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Supplier Part Number" "C0805C104K4RACTU"
+			(at 201.93 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f193c6fe-d577-48f8-8180-5aa4050efd9c")
+		)
+		(pin "2"
+			(uuid "c36ed9fe-afc1-4a8e-abec-f6acaf4f551e")
+		)
+		(instances
+			(project "radar"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a/10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4"
+					(reference "C105")
+					(unit 1)
+				)
+			)
+		)
+	)
+)

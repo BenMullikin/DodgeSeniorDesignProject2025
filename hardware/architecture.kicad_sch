@@ -1,0 +1,454 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "3a0bf359-6404-4f90-8eeb-a54b9904c7b2")
+	(paper "USLetter")
+	(title_block
+		(title "${BOARD_NAME}")
+		(date "2025-04-07")
+		(rev "${REVISION}")
+		(company "${DESIGNER}")
+	)
+	(lib_symbols)
+	(text "Target Specifications"
+		(exclude_from_sim yes)
+		(at 214.63 166.37 0)
+		(effects
+			(font
+				(face "Verdana")
+				(size 1.905 1.905)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "71118532-97b6-499b-bf77-ae09ccb2b6e3")
+	)
+	(text "PROJECT ARCHITECTURE"
+		(exclude_from_sim yes)
+		(at 16.256 24.13 0)
+		(effects
+			(font
+				(face "Verdana")
+				(size 7.62 7.62)
+				(thickness 0.254)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "d1c2fc23-ce0b-40cf-af7d-8c06d87e54e1")
+	)
+	(polyline
+		(pts
+			(xy 214.884 167.64) (xy 265.43 167.64)
+		)
+		(stroke
+			(width 0.508)
+			(type solid)
+			(color 0 0 0 1)
+		)
+		(uuid "2a6f21b4-8881-4de8-ac10-ccf669fc5f2a")
+	)
+	(polyline
+		(pts
+			(xy 214.63 181.61) (xy 265.176 181.61)
+		)
+		(stroke
+			(width 0.508)
+			(type solid)
+			(color 0 0 0 1)
+		)
+		(uuid "522ffd47-c4f5-474e-92ce-eed84241fec8")
+	)
+	(table
+		(column_count 2)
+		(border
+			(external no)
+			(header no)
+		)
+		(separators
+			(rows no)
+			(cols no)
+		)
+		(column_widths 27.178 24.13)
+		(row_heights 3.048 3.048 3.048 3.048)
+		(cells
+			(table_cell "Input Voltage:"
+				(exclude_from_sim no)
+				(at 214.122 168.91 0)
+				(size 27.178 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify right)
+				)
+				(uuid "3dfc322f-a8b7-40b0-8f3f-dcc5bb48d8e1")
+			)
+			(table_cell "??V-??V"
+				(exclude_from_sim no)
+				(at 241.3 168.91 0)
+				(size 24.13 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify left)
+				)
+				(uuid "a561799d-e1be-440c-a309-e5200b5a536a")
+			)
+			(table_cell "Spec 1:"
+				(exclude_from_sim no)
+				(at 214.122 171.958 0)
+				(size 27.178 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify right)
+				)
+				(uuid "71f3cb8e-cd11-442d-b2a4-3e755c6e493a")
+			)
+			(table_cell "????"
+				(exclude_from_sim no)
+				(at 241.3 171.958 0)
+				(size 24.13 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify left)
+				)
+				(uuid "67296d3e-1b73-4c00-b4d6-f8f9d620bc6d")
+			)
+			(table_cell "Spec 2:"
+				(exclude_from_sim no)
+				(at 214.122 175.006 0)
+				(size 27.178 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify right)
+				)
+				(uuid "13a0f6e9-7e32-479b-a51a-cb2baf56235e")
+			)
+			(table_cell "????"
+				(exclude_from_sim no)
+				(at 241.3 175.006 0)
+				(size 24.13 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify left)
+				)
+				(uuid "62611f3e-8e78-41d6-aff5-125e9ce791a3")
+			)
+			(table_cell "Spec 3:"
+				(exclude_from_sim no)
+				(at 214.122 178.054 0)
+				(size 27.178 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify right)
+				)
+				(uuid "f2d78ed0-dc10-4586-b920-57ea1c3f2a8c")
+			)
+			(table_cell "????"
+				(exclude_from_sim no)
+				(at 241.3 178.054 0)
+				(size 24.13 3.048)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(size 1.905 1.905)
+						(color 0 0 0 1)
+					)
+					(justify left)
+				)
+				(uuid "9d54ac1d-ae71-44b3-b73d-49f9fd490178")
+			)
+		)
+	)
+	(sheet
+		(at 194.31 55.88)
+		(size 17.78 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "10bfa6a8-ee68-4d82-ad5e-250dd1e93eb4")
+		(property "Sheetname" "INTERFACE - USB"
+			(at 194.31 55.1684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "interface_usb.kicad_sch"
+			(at 194.31 78.0546 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "senior_project"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a"
+					(page "15")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 162.56 114.3)
+		(size 17.78 21.59)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "28b86601-5014-4b7f-8720-7b0fa191e1f0")
+		(property "Sheetname" "MISC - CLOCK"
+			(at 162.56 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "misc-clock.kicad_sch"
+			(at 162.56 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "senior_project"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a"
+					(page "16")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 162.56 88.9)
+		(size 24.13 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "3104b0d0-c6e8-44db-ac3e-876ad5b486a0")
+		(property "Sheetname" "MCU - IOs"
+			(at 162.56 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_io.kicad_sch"
+			(at 162.56 107.2646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "senior_project"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 162.56 54.61)
+		(size 20.32 26.67)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9c309954-4d1a-4a26-8cf1-ac2dec676feb")
+		(property "Sheetname" "MCU - Power"
+			(at 162.56 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu_power.kicad_sch"
+			(at 162.56 81.8646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3.3V" input
+			(at 162.56 60.96 180)
+			(uuid "4e1fc775-55ff-4f89-9684-a6e6735c4748")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" input
+			(at 162.56 66.04 180)
+			(uuid "5ee29d97-edee-4e5e-9942-bd530a8c7a3e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "senior_project"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 194.31 88.9)
+		(size 17.78 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d653335d-69a8-4fb9-a8fa-783939634a9f")
+		(property "Sheetname" "MCU - Base"
+			(at 194.31 88.1884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu-base.kicad_sch"
+			(at 194.31 108.5346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "senior_project"
+				(path "/6f4585fe-170a-460f-821c-f2114dc34181/6f1a5909-ac4c-4363-8523-c7dc18344b8a"
+					(page "5")
+				)
+			)
+		)
+	)
+)

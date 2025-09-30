@@ -1,0 +1,12 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/lib/local-MCU/footprints/Library.pretty")(options "")(descr ""))
+  (lib (name "local-mcu")(type "KiCad")(uri "${KIPRJMOD}/lib/local-MCU/local-mcu.pretty")(options "")(descr ""))
+  (lib (name "local-lna")(type "KiCad")(uri "${KIPRJMOD}/lib/local-LNA/local-lna.pretty")(options "")(descr ""))
+  (lib (name "local-cap")(type "KiCad")(uri "${KIPRJMOD}/lib/local-cap/local-cap.pretty")(options "")(descr ""))
+  (lib (name "local-ldo")(type "KiCad")(uri "${KIPRJMOD}/lib/local-LDO/local-ldo.pretty")(options "")(descr ""))
+  (lib (name "local-button")(type "KiCad")(uri "${KIPRJMOD}/lib/local-button/local-button.pretty")(options "")(descr ""))
+  (lib (name "local-res")(type "KiCad")(uri "${KIPRJMOD}/lib/local-res/local-res.pretty")(options "")(descr ""))
+  (lib (name "local-dac")(type "KiCad")(uri "${KIPRJMOD}/lib/local-dac/local-dac.pretty")(options "")(descr ""))
+  (lib (name "local-buffer")(type "KiCad")(uri "${KIPRJMOD}/lib/local-buffer/local-buffer.pretty")(options "")(descr ""))
+)
