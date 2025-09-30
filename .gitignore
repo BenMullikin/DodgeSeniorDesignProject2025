@@ -1,0 +1,58 @@
+# ─── KiCad ────────────────────────────────────────────────────────────
+
+# backup & cache
+*.bak
+*.kicad_pro-bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_mod-bak
+*.kicad_prl
+*.kicad_sch.lck
+fp-lib-table.cache
+fp-info-cache
+/#auto_saved_files/#
+_autosave-*
+
+# generated outputs (Gerbers, drill, plots, etc.)
+*.gbr
+*.drl
+*.dri
+*.drl.zip
+*.pl
+*.ps
+*.pdf
+*.svg
+
+# internal plotting/messaging
+*.kicad_pcb-msg
+*.net
+*.cmp
+*.sol
+
+# ─── FreeCAD ──────────────────────────────────────────────────────────
+
+# autosave files (FreeCAD_autosave_<timestamp>.FCStd)
+FreeCAD_autosave_*.FCStd
+
+# generic backup suffixes
+*~FCStd
+*.FCStd.~*
+
+# ─── add‑ons & extras ──────────────────────────────────────────────────
+
+# Gerber zip bundles, PCB 3D exports, etc.
+squawkbox-backups/
+gerbers/
+3d-exports/
+
+# Whitelist Docs
+!docs/
+!docs/*.pdf
+!hardware/docs/
+!hardware/docs/*.pdf
+!hardware/docs/datasheets/*.pdf
+!firmware/docs/
+!firmware/docs/*.pdf
+
+# firmware/toolchain artifacts
+# e.g. *.elf, *.hex, *.bin, build/, firmware/output/
