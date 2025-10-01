@@ -1,0 +1,34 @@
+name: build
+on: [push, pull_request]
+jobs:
+  master:
+    runs-on: ubuntu-latest
+    container: ghcr.io/espressif/idf:release-v5.2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Buil web_app
+        uses: actions/setup-node@v4
+        with: { node-version: '20'}
+      - run: npm ci --prefix web_app && npm build --prefix web_app
+      - name: Build master
+        run: idf.py -C /software/firmware/master set-target esp32s3 build
+      -uses: actions/upload-artifact@v4
+        with { name: master, path: /software/firmware/master/build/*.bin }
+
+  sensor:
+    runs-on: ubuntu-latest
+    container: ghcr.io/espressif/idf:release-v5.2
+    steps:
+      - uses: actions/checkout@v4
+      - run: idf.py -C /software/firmware/foot set-target esp32s3 build
+      - uses: actions/upload-artifact@v4
+        with: { name: sensor, path: /software/firmware/sensor/build/*.bin }
+  webui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci --prefix web_app && npm run build --prefix web_app
+      - uses: actions/upload-artifact@v4
+        with: { name: web_app_dist, path: /software/web_app/dist }

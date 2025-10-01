@@ -38,6 +38,13 @@ FreeCAD_autosave_*.FCStd
 *~FCStd
 *.FCStd.~*
 
+
+# ─── VS Code ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
 # ─── add‑ons & extras ──────────────────────────────────────────────────
 
 # Gerber zip bundles, PCB 3D exports, etc.
@@ -51,8 +58,15 @@ gerbers/
 !hardware/docs/
 !hardware/docs/*.pdf
 !hardware/docs/datasheets/*.pdf
-!firmware/docs/
-!firmware/docs/*.pdf
+!software/docs/
+!software/docs/*.pdf
 
 # firmware/toolchain artifacts
-# e.g. *.elf, *.hex, *.bin, build/, firmware/output/
+**/build/
+**/dist/
+*.elf
+*.bin
+*.hex
+*.map
+*.dump
+*.log
