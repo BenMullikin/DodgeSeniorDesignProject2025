@@ -1,0 +1,23 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "software/firmware/master" },
+    { "path": "software/firmware/sensor" },
+    { "path": "software/web_app"}
+  ],
+  "settings": {
+    // Kinda confused about this bit, but it was in the documentation so idk? Seems like the dev container would handle it?
+    "idf.toolsIdfSetupType": "useExisting",
+    "idf.espIdfPath": "/opt/esp-idf",
+    "idf.toolsPath": "/root/.espressif",
+    "idf.pythonBinPath": "/usr/bin/python3",
+    "idf.gitPath": "/usr/bin/git",
+    "idf.customExtraPaths": [
+      "/root/.espressif/tools/ninja/*",
+      "/root/.espressif/tools/xtensa-esp-elf/*/bin",
+      "/root/.espressif/python_env/idf*/*/bin"
+    ],
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json"
+  }
+}

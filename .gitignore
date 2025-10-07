@@ -57,7 +57,7 @@ gerbers/
 !docs/*.pdf
 !hardware/docs/
 !hardware/docs/*.pdf
-!hardware/docs/datasheets/*.pdf
+# !hardware/docs/datasheets/*.pdf
 !software/docs/
 !software/docs/*.pdf
 
@@ -70,3 +70,6 @@ gerbers/
 *.map
 *.dump
 *.log
+software/firmware/**/build/
+software/firmware/**/.cache/
+software/firmware/**/sdkconfig.old

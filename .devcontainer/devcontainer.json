@@ -13,9 +13,19 @@
 			"settings": {
 				"terminal.integrated.defaultProfile.linux": "bash",
 				"idf.espIdfPath": "/opt/esp-idf",
-				"idf.toolsPath": "/opt/esp-idf/tools",
-				"idf.gitPath": "/usr/bin/git"
+				"idf.toolsPath": "/root/.espressif",
+				"idf.gitPath": "/usr/bin/git",
+				"idf.pythonBinPath": "/usr/bin/python3",
+				"idf.adapterTargetName": "esp32s3",
+				"idf.usePowerShell": false
 			},
+			"idf.customExtraPaths": [
+          		"/root/.espressif/tools/ninja/*",
+          		"/root/.espressif/tools/xtensa-esp-elf/*/bin",
+          		"/root/.espressif/tools/xtensa-esp32s3-elf/*/bin",
+          		"/root/.espressif/tools/riscv32-esp-elf/*/bin",
+          		"/root/.espressif/python_env/idf*/*/bin"
+        	],
 			"extensions": [
 				"ms-vscode.cpptools",
 				"ms-vscode.cpptools-extension-pack",
@@ -26,5 +36,12 @@
 			]
 		}
 	},
-	"runArgs": ["--memory=2g", "--device=/dev/ttyUSB*", "--pid=host", "--privileged"]
+	"runArgs": ["--privileged"],
+
+	"remoteEnv": {
+    "IDF_PATH": "/opt/esp-idf",
+    "IDF_TOOLS_PATH": "/root/.espressif"
+  },
+  "postCreateCommand": "bash -lc 'git -C /opt/esp-idf submodule update --init --recursive; . /opt/esp-idf/export.sh; idf.py --version || true; tools/bootstrap_idf_projects.sh || true'",
+  "postAttachCommand": "bash -lc 'source /opt/esp-idf/export.sh && cd software/firmware/master && rm -rf build && idf.py set-target esp32s3 reconfigure && cd ../sensor && rm -rf build && idf.py set-target esp32s3 reconfigure'"
 }
