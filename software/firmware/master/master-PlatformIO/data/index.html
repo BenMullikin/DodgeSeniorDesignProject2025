@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sensor Hub - Test Interface</title>
+    <title>Sensor Hub Test</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .sensor { border: 1px solid #ccc; margin: 10px; padding: 10px; }
         .fresh { background-color: #e8f5e8; }
         .stale { background-color: #ffe8e8; }
+        #status { padding: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+        .connected { background: #e8f5e8; color: #2e7d32; }
+        .disconnected { background: #ffebee; color: #c62828; }
         #rawData { font-family: monospace; white-space: pre; background: #f5f5f5; padding: 10px; }
     </style>
 </head>
 <body>
     <h1>ESP32 Sensor Hub - Test Interface</h1>
-    <div id="status">Disconnected</div>
-    <div id="sensors"></div>
+    <div id="status" class="disconnected">Disconnected from Sensor Hub</div>
+    <div id="sensorsContainer"></div>
     <h3>Raw WebSocket Data:</h3>
     <div id="rawData">Waiting for data...</div>
 
@@ -21,15 +24,14 @@
         const ws = new WebSocket('ws://' + window.location.hostname + ':81/');
         
         ws.onopen = () => {
-            document.getElementById('status').textContent = '✅ WebSocket Connected';
-            document.getElementById('status').style.color = 'green';
+            document.getElementById('status').textContent = 'Connected to Sensor Hub - Receiving real-time data';
+            document.getElementById('status').className = 'status connected';
         };
         
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
             document.getElementById('rawData').textContent = JSON.stringify(data, null, 2);
             
-            // Simple sensor display
             let html = '';
             data.sensors.forEach((sensor, index) => {
                 html += `<div class="sensor ${sensor.fresh ? 'fresh' : 'stale'}">
@@ -37,12 +39,15 @@
                     <p>Distance: ${sensor.distance_mm} mm | Stable: ${sensor.stable} | CH1: ${sensor.ch1_active} | CH2: ${sensor.ch2_active}</p>
                 </div>`;
             });
-            document.getElementById('sensors').innerHTML = html;
+            document.getElementById('sensorsContainer').innerHTML = html;
         };
         
         ws.onclose = () => {
-            document.getElementById('status').textContent = '❌ WebSocket Disconnected';
-            document.getElementById('status').style.color = 'red';
+            document.getElementById('status').textContent = 'Disconnected from Sensor Hub - Attempting to reconnect...';
+            document.getElementById('status').className = 'status disconnected';
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
         };
     </script>
 </body>

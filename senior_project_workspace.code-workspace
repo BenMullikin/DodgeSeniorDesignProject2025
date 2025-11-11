@@ -1,9 +1,21 @@
 {
   "folders": [
-    { "path": "." },
-    { "path": "software/firmware/master" },
-    { "path": "software/firmware/sensor" },
-    { "path": "software/web_app"}
+    {
+      "path": "."
+    },
+    {
+      "path": "software/firmware/master"
+    },
+    {
+      "path": "software/firmware/sensor"
+    },
+    {
+      "path": "software/web_app"
+    },
+    {
+      "name": "master-PlatformIO",
+      "path": "software/firmware/master/master-PlatformIO"
+    }
   ],
   "settings": {
     // Kinda confused about this bit, but it was in the documentation so idk? Seems like the dev container would handle it?
