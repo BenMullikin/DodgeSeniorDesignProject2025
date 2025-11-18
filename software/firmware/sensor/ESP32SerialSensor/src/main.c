@@ -8,6 +8,9 @@
 #include "cJSON.h"                 // JSON library
 #include <time.h>                  // Time structures
 #include "esp_sntp.h"              // SNTP time syncing (NTP)
+#include <string.h>
+#include "esp_netif.h"
+#include "esp_event.h"
 
 // -------------------------
 // ADC CONFIG
@@ -75,6 +78,12 @@ void send_cb(const wifi_tx_info_t *info, esp_now_send_status_t status) {
 // WIFI INIT (REQUIRED FOR ESP-NOW)
 // -------------------------
 void init_wifi() {
+    /* Initialize TCP/IP network interface and default event loop
+     * Required before calling esp_wifi_init() in most IDF examples. */
+    esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_sta();
+
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     esp_wifi_init(&cfg);                // initialize WiFi stack
     esp_wifi_set_mode(WIFI_MODE_STA);   // station mode
@@ -146,6 +155,7 @@ void app_main(void) {
     wifi_second_chan_t second;
     esp_wifi_get_channel(&channel, &second); // get current WiFi channel
     peerInfo.channel = channel;              // match current WiFi channel
+    peerInfo.ifidx = ESP_IF_WIFI_STA;        // ensure interface index matches STA
     peerInfo.encrypt = false;                // no encryption for broadcast
 
     if (esp_now_add_peer(&peerInfo) != ESP_OK) {
