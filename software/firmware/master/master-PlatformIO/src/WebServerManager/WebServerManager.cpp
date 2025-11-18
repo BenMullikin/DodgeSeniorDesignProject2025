@@ -1,60 +1,85 @@
 #include "WebServerManager.h"
 
-WebServerManager::WebServerManager(uint16_t port) 
-  : server_(port), captive_portal_enabled_(true) {
+WebServerManager::WebServerManager() : server(80) {
 }
 
 bool WebServerManager::begin() {
   Serial.println("Initializing Web Server...");
   
-  if (!LittleFS.begin()) {
+  // Initialize LittleFS
+  if (!LittleFS.begin(true)) {
     Serial.println("LittleFS initialization failed!");
     return false;
   }
+  Serial.println("LittleFS mounted successfully");
+  
+  // Start DNS server for captive portal
+  dnsServer.start(53, "*", WiFi.softAPIP());
   
   setupRoutes();
   
-  if (captive_portal_enabled_) {
-    setupCaptivePortal();
-  }
-  
-  server_.begin();
-  Serial.println("Web server started"); // Removed port() call
+  server.begin();
+  Serial.println("Web server started on port 80");
   return true;
 }
 
-void WebServerManager::setCaptivePortal(bool enable) {
-  captive_portal_enabled_ = enable;
+void WebServerManager::handleClient() {
+  dnsServer.processNextRequest();
+  server.handleClient();
 }
 
 void WebServerManager::setupRoutes() {
-  server_.serveStatic("/", LittleFS, "/").setDefaultFile("index.html");
+  // Serve main page
+  server.on("/", [this]() {
+    serveFile("/index.html", "text/html");
+  });
   
-  server_.on("/api/status", HTTP_GET, [](AsyncWebServerRequest *request) {
-    request->send(200, "application/json", "{\"status\":\"online\"}");
+  // Serve other common captive portal URLs
+  server.on("/generate_204", [this]() {
+    serveFile("/index.html", "text/html");
+  });
+  
+  server.on("/hotspot-detect.html", [this]() {
+    serveFile("/index.html", "text/html");
+  });
+  
+  // API endpoint for testing
+  server.on("/api/hello", HTTP_GET, [this]() {
+    server.send(200, "application/json", "{\"message\":\"Hello from ESP32!\"}");
+  });
+  
+  // Catch-all handler - serve files from LittleFS or redirect to index.html
+  server.onNotFound([this]() {
+    String path = server.uri();
+    
+    // Try to serve the requested file
+    if (LittleFS.exists(path)) {
+      if (path.endsWith(".css")) {
+        serveFile(path, "text/css");
+      } else if (path.endsWith(".js")) {
+        serveFile(path, "application/javascript");
+      } else if (path.endsWith(".png")) {
+        serveFile(path, "image/png");
+      } else if (path.endsWith(".jpg")) {
+        serveFile(path, "image/jpeg");
+      } else {
+        serveFile(path, "text/plain");
+      }
+    } else {
+      // File not found, serve index.html (captive portal behavior)
+      Serial.println("File not found, serving index.html: " + path);
+      serveFile("/index.html", "text/html");
+    }
   });
 }
 
-void WebServerManager::setupCaptivePortal() {
-  server_.on("/generate_204", HTTP_GET, [](AsyncWebServerRequest *request) {
-    request->redirect("/");
-  });
+void WebServerManager::serveFile(const String& path, const String& contentType) {
+  File file = LittleFS.open(path, "r");
+  if (!file) {
+    server.send(404, "text/plain", "File not found: " + path);
+    return;
+  }
   
-  server_.on("/hotspot-detect.html", HTTP_GET, [](AsyncWebServerRequest *request) {
-    request->redirect("/");
-  });
-  
-  server_.onNotFound([](AsyncWebServerRequest *request) {
-    Serial.println("Captive portal redirect: " + String(request->url().c_str()));
-    request->send(LittleFS, "/index.html", "text/html");
-  });
-}
-
-String WebServerManager::getContentType(const String& filename) {
-  if (filename.endsWith(".html")) return "text/html";
-  if (filename.endsWith(".css")) return "text/css";
-  if (filename.endsWith(".js")) return "application/javascript";
-  if (filename.endsWith(".png")) return "image/png";
-  if (filename.endsWith(".jpg")) return "image/jpeg";
-  return "text/plain";
+  server.streamFile(file, contentType);
+  file.close();
 }

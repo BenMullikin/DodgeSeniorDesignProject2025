@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sensor Hub Test</title>
+    <title>ESP32 Sensor Hub - Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        .sensor { border: 1px solid #ccc; margin: 10px; padding: 10px; }
-        .fresh { background-color: #e8f5e8; }
-        .stale { background-color: #ffe8e8; }
-        #status { padding: 10px; margin-bottom: 20px; text-align: center; font-weight: bold; }
-        .connected { background: #e8f5e8; color: #2e7d32; }
-        .disconnected { background: #ffebee; color: #c62828; }
-        #rawData { font-family: monospace; white-space: pre; background: #f5f5f5; padding: 10px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px;
+            background: #f0f0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .connected {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
     </style>
 </head>
 <body>
-    <h1>ESP32 Sensor Hub - Test Interface</h1>
-    <div id="status" class="disconnected">Disconnected from Sensor Hub</div>
-    <div id="sensorsContainer"></div>
-    <h3>Raw WebSocket Data:</h3>
-    <div id="rawData">Waiting for data...</div>
+    <div class="container">
+        <h1>ESP32 Sensor Hub</h1>
+        <p>Welcome to the ESP32 test page!</p>
+        
+        <div class="status connected">
+            Connected successfully to ESP32
+        </div>
+        
+        <p>This is a test of the captive portal and web server functionality.</p>
+        <p>Next steps: WebSocket data streaming and ESPNOW integration.</p>
+        
+        <button onclick="testAPI()">Test API Connection</button>
+        <div id="apiResult" style="margin-top: 10px;"></div>
+    </div>
 
     <script>
-        const ws = new WebSocket('ws://' + window.location.hostname + ':81/');
+        function testAPI() {
+            fetch('/api/hello')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('apiResult').innerHTML = 
+                        'API Response: ' + data.message;
+                })
+                .catch(error => {
+                    document.getElementById('apiResult').innerHTML = 
+                        'API Error: ' + error;
+                });
+        }
         
-        ws.onopen = () => {
-            document.getElementById('status').textContent = 'Connected to Sensor Hub - Receiving real-time data';
-            document.getElementById('status').className = 'status connected';
-        };
-        
-        ws.onmessage = (event) => {
-            const data = JSON.parse(event.data);
-            document.getElementById('rawData').textContent = JSON.stringify(data, null, 2);
-            
-            let html = '';
-            data.sensors.forEach((sensor, index) => {
-                html += `<div class="sensor ${sensor.fresh ? 'fresh' : 'stale'}">
-                    <h3>Sensor ${sensor.id}</h3>
-                    <p>Distance: ${sensor.distance_mm} mm | Stable: ${sensor.stable} | CH1: ${sensor.ch1_active} | CH2: ${sensor.ch2_active}</p>
-                </div>`;
-            });
-            document.getElementById('sensorsContainer').innerHTML = html;
-        };
-        
-        ws.onclose = () => {
-            document.getElementById('status').textContent = 'Disconnected from Sensor Hub - Attempting to reconnect...';
-            document.getElementById('status').className = 'status disconnected';
-            setTimeout(() => {
-                window.location.reload();
-            }, 3000);
-        };
+        // Display connection info
+        console.log('WebApp loaded successfully');
+        console.log('Host:', window.location.hostname);
     </script>
 </body>
 </html>

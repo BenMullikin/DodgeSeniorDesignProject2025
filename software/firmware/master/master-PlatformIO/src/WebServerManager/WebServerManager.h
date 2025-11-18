@@ -1,23 +1,23 @@
 #ifndef WEB_SERVER_MANAGER_H
 #define WEB_SERVER_MANAGER_H
 
-#include <ESPAsyncWebServer.h>
+#include <WebServer.h>
+#include <DNSServer.h>
 #include <LittleFS.h>
 
 class WebServerManager {
 public:
-  WebServerManager(uint16_t port = 80);
+  WebServerManager();
   
   bool begin();
-  void setCaptivePortal(bool enable);
+  void handleClient();
   
 private:
-  AsyncWebServer server_;
-  bool captive_portal_enabled_;
+  WebServer server;
+  DNSServer dnsServer;
   
   void setupRoutes();
-  void setupCaptivePortal();
-  String getContentType(const String& filename);
+  void serveFile(const String& path, const String& contentType);
 };
 
 #endif
