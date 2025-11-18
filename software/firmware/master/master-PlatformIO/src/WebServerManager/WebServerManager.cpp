@@ -4,9 +4,8 @@ WebServerManager::WebServerManager() : server(80) {
 }
 
 bool WebServerManager::begin() {
-  Serial.println("Initializing Web Server...");
+  Serial.println("Initializing Web Server with HTTP Streaming...");
   
-  // Initialize LittleFS
   if (!LittleFS.begin(true)) {
     Serial.println("LittleFS initialization failed!");
     return false;
@@ -28,10 +27,37 @@ void WebServerManager::handleClient() {
   server.handleClient();
 }
 
+void WebServerManager::setDataCallback(DataCallback callback) {
+  data_callback_ = callback;
+}
+
+void WebServerManager::broadcastData(const String& data) {
+  lastData = data;
+  // Data will be sent when clients request it via polling
+}
+
 void WebServerManager::setupRoutes() {
   // Serve main page
   server.on("/", [this]() {
     serveFile("/index.html", "text/html");
+  });
+  
+  // API endpoint to get latest data (polling)
+  server.on("/api/data", HTTP_GET, [this]() {
+    server.send(200, "application/json", lastData);
+  });
+  
+  // API endpoint to send test data
+  server.on("/api/send", HTTP_POST, [this]() {
+    if (server.hasArg("plain")) {
+      String data = server.arg("plain");
+      if (data_callback_) {
+        data_callback_(data);
+      }
+      server.send(200, "application/json", "{\"status\":\"received\"}");
+    } else {
+      server.send(400, "application/json", "{\"error\":\"No data\"}");
+    }
   });
   
   // Serve other common captive portal URLs
@@ -43,33 +69,9 @@ void WebServerManager::setupRoutes() {
     serveFile("/index.html", "text/html");
   });
   
-  // API endpoint for testing
-  server.on("/api/hello", HTTP_GET, [this]() {
-    server.send(200, "application/json", "{\"message\":\"Hello from ESP32!\"}");
-  });
-  
-  // Catch-all handler - serve files from LittleFS or redirect to index.html
+  // Catch-all handler
   server.onNotFound([this]() {
-    String path = server.uri();
-    
-    // Try to serve the requested file
-    if (LittleFS.exists(path)) {
-      if (path.endsWith(".css")) {
-        serveFile(path, "text/css");
-      } else if (path.endsWith(".js")) {
-        serveFile(path, "application/javascript");
-      } else if (path.endsWith(".png")) {
-        serveFile(path, "image/png");
-      } else if (path.endsWith(".jpg")) {
-        serveFile(path, "image/jpeg");
-      } else {
-        serveFile(path, "text/plain");
-      }
-    } else {
-      // File not found, serve index.html (captive portal behavior)
-      Serial.println("File not found, serving index.html: " + path);
-      serveFile("/index.html", "text/html");
-    }
+    serveFile("/index.html", "text/html");
   });
 }
 

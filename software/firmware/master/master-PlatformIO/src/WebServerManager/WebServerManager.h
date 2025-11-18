@@ -4,6 +4,9 @@
 #include <WebServer.h>
 #include <DNSServer.h>
 #include <LittleFS.h>
+#include <functional>
+
+typedef std::function<void(const String& message)> DataCallback;
 
 class WebServerManager {
 public:
@@ -11,13 +14,18 @@ public:
   
   bool begin();
   void handleClient();
+  void setDataCallback(DataCallback callback);
+  void broadcastData(const String& data);
   
 private:
   WebServer server;
   DNSServer dnsServer;
+  DataCallback data_callback_;
+  String lastData;
   
   void setupRoutes();
   void serveFile(const String& path, const String& contentType);
+  void handleSSE();
 };
 
 #endif
