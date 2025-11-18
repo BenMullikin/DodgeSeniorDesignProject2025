@@ -1,0 +1,13 @@
+[wokwi]
+version = 1
+
+[simulate]
+port = 9001
+
+[[chip]]
+name = "esp32"
+model = "esp32"
+
+[[adc]]
+pin = 34
+value = 1800   		# simulated raw ADC reading (0–4095)
