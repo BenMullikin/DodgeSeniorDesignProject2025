@@ -1,13 +1,4 @@
 [wokwi]
 version = 1
-
-[simulate]
-port = 9001
-
-[[chip]]
-name = "esp32"
-model = "esp32"
-
-[[adc]]
-pin = 34
-value = 1800   		# simulated raw ADC reading (0–4095)
+firmware = '.pio\build\esp32-s3-devkitc-1\firmware.bin'
+elf = '.pio\build\esp32-s3-devkitc-1\firmware.elf'
