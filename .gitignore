@@ -73,3 +73,8 @@ gerbers/
 software/firmware/**/build/
 software/firmware/**/.cache/
 software/firmware/**/sdkconfig.old
+
+# PlatformIO artifacts
+.pio
+.pioenvs
+.piolibdeps
